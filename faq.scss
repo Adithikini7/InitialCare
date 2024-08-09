@@ -1,0 +1,95 @@
+// Colors
+$gray: #eee;
+
+// Angular
+[ng-click] {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+// Main content bg color
+md-content {
+  background-color: $gray;
+}
+
+// Navigation drawer pattern: https://www.google.com/design/spec/patterns/navigation-drawer.html#navigation-drawer-specs
+md-sidenav {
+  & > md-toolbar {
+    padding: 15px;
+  }
+  md-list-item.md-2-line, md-list-item.md-2-line>.md-no-style {
+    min-height: 0;
+  }
+  & md-list-item.md-2-line .md-list-item-text {
+    padding-top: 14px;
+    padding-bottom: 12px;
+  }
+  & md-divider {
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+}
+
+// White svg icons in toolbar and fab
+
+md-sidenav {
+  md-icon {
+    fill: #737373;
+    position: relative;
+  }
+  .md-avatar {
+    height: 64px !important;
+    width: 64px !important;
+  }
+}
+
+/* More closely matches https://www.google.com/design/spec/components/lists.html#lists-specs */
+md-list-item.md-3-line {
+  md-divider {
+    &[md-inset] {
+      left: 70px;
+    }
+  }
+}
+
+// Round avatar
+.md-avatar {
+  height: 40px;
+  width: 40px !important;
+  & > svg {
+    border-radius: 50%;
+  }
+}
+
+/* fade animation */
+.animate-show {
+    transition: 0.75s ease-out opacity;
+    opacity: 1;
+  &.ng-hide {
+    height: 0;
+    min-height: 0;
+    opacity: 0;
+    overflow: hidden;
+  }
+}
+
+md-list-item.md-3-line.md-long-text {
+  margin-top: 10px !important;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+md-card-actions {
+  margin: 4px 4px 4px 4px !important;
+  padding: 0 !important;
+  &,
+  & * {
+    color: gray;
+    fill: gray;
+  }
+  md-icon {
+    height: 16px;
+    width: 16px;
+  }
+}
